@@ -1,11 +1,12 @@
 #include <iostream>
 #include <regex>
 using namespace std;
-int main(){
+int main()
+{
     system("chcp 1251>nul");
-    char* str = new char[100];
-    cin.getline(str,100);
-    cout << (regex_replace(str, regex("áåëûé îğåë"), "áåëûé ëåáåäü"));
+    char *str = new char[100];
+    cin.getline(str, 100);
+    cout << (regex_replace(str, regex("Ğ±ĞµĞ»Ñ‹Ğ¹ Ğ¾Ñ€ĞµĞ»"), "Ğ±ĞµĞ»Ñ‹Ğ¹ Ğ»ĞµĞ±ĞµĞ´ÑŒ"));
     delete[] str;
     return 0;
 }

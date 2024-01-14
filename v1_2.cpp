@@ -1,9 +1,9 @@
 #include <iostream>
 #include <cstring>
 
-char* substr(char* arr, int begin, int len)
+char *substr(char *arr, int begin, int len)
 {
-    char* res = new char[len + 1];
+    char *res = new char[len + 1];
     for (int i = 0; i < len; i++)
         res[i] = *(arr + begin + i);
     res[len] = 0;
@@ -11,23 +11,28 @@ char* substr(char* arr, int begin, int len)
 }
 
 using namespace std;
-int main(int argc, char** argv){ 
+int main(int argc, char **argv)
+{
     system("chcp 1251>nul");
-    char* mas= new char[100];
+    char *mas = new char[100];
     cin.getline(mas, 100);
-    int len = strlen(mas), i=0;
+    int len = strlen(mas), i = 0;
     while (i < len)
     {
-        if (mas[i] == 'á'){
-            if(strcmp(substr(mas,i,10), "áåëûé îğåë") == 0){
-                cout << "áåëûé ëåáåäü";
-                i+=10;
+        if (mas[i] == 'Ğ±')
+        {
+            if (strcmp(substr(mas, i, 10), "Ğ±ĞµĞ»Ñ‹Ğ¹ Ğ¾Ñ€ĞµĞ»") == 0)
+            {
+                cout << "Ğ±ĞµĞ»Ñ‹Ğ¹ Ğ»ĞµĞ±ĞµĞ´ÑŒ";
+                i += 10;
             }
-            else{
+            else
+            {
                 cout << mas[i];
             }
         }
-        else{
+        else
+        {
             cout << mas[i];
         }
         i++;

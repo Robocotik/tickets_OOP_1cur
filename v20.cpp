@@ -3,8 +3,10 @@
 
 using namespace std;
 
-void showWord(char* mas, int start, int end){
-    for(int i=start; i>= end; i--){
+void showWord(char *mas, int start, int end)
+{
+    for (int i = start; i >= end; i--)
+    {
         cout << mas[i];
     }
 }
@@ -27,8 +29,8 @@ int main(int argc, char **argv)
                     tmp++;
                 }
                 tmp--;
-                showWord(mas,tmp,i);
-                //cout << i << " " << tmp << endl;
+                showWord(mas, tmp, i);
+                // cout << i << " " << tmp << endl;
             }
         }
         else
